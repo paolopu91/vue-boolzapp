@@ -6,7 +6,7 @@ Creare una replica di whatsapp web
 const contatti = [
     {
       name: "Michele",
-      avatar: "_1",
+      avatar: "avatar_1.jpg",
       visible: true,
       messages: [
         {
@@ -166,3 +166,10 @@ const contatti = [
       ],
     },
   ]
+new Vue({
+    el:"#app",
+    data:{
+        contacts: contatti,
+        i:0,
+    }
+})

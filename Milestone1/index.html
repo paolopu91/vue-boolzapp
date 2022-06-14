@@ -35,15 +35,15 @@
                     <div class="left-bar col">
 
                         <!-- barra in alto shrink 0-->
-                        <div class="username d-flex align-items-center">
+                        <div class=" container username d-flex align-items-center">
                             <!--container left -->
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex flex-shrink-0 align-items-center">
                                 <img class="overflow-hidden rounded-circle avatar-user" src="img/paolo.jpg" alt="">
                                 <h4>Paolo</h4>
                             </div>
 
                         <!-- container icons -->
-                        <div class=" container d-flex align-items-center justify-content-end">
+                        <div class=" container flex-shrink-0 d-flex align-items-center justify-content-end">
                             <span class="mx-2"><i class="color-icons fa-solid fa-circle-notch"></i></span>
                             <span class="mx-2"><i class="color-icons fa-solid fa-message"></i></span>
                             <span class="mx-2"><i class="color-icons fa-solid fa-ellipsis-vertical"></i></span>
@@ -58,11 +58,11 @@
                         
 
                         <!-- barra delle notifiche shrink0-->
-                        <div class="notifications-bar d-flex">
-                            <div class=" container d-flex align-items-center ">
-                                <span class="oveflow-hidden rounded-circle bg-white "><i class="fa-solid fa-bell-slash"></i></span>
+                        <div class="notifications-bar d-flex flex-shrink-0">
+                            <div class=" container d-flex align-items-center flex-shrink-0">
+                                <span class="my-bell oveflow-hidden rounded-circle bg-white "><i class="fa-solid fa-bell-slash"></i></span>
 
-                                <div class="d-flex flex-column">
+                                <div class="d-flex flex-column flex-shrink-0">
                                     <span>Ricevi notifiche di nuovi messaggi</span>
                                     <a href="https://faq.whatsapp.com/web/chats/how-to-manage-your-notifications/?lang=it">Attiva notifiche Desktop</a>
                                 </div>
@@ -72,14 +72,14 @@
                         </div>
 
                         <!-- barra di ricerca shrink0-->
-                        <div class="search-bar">
-                            <div class="container d-flex">
+                        <div class="search-bar flex-shrink-0">
+                            <div class="container d-flex flex-shrink-0">
                                 <!-- search icon -->
-                                <div class="container-search-icon d-flex justify-content-center">
+                                <div class="container-search-icon d-flex justify-content-center flex-shrink-0">
                                     <span><i class="color-icons fa-solid fa-magnifying-glass"></i></span>
                                 </div>
                                 <!-- search text -->
-                                <div class="container-search-text">
+                                <div class="container-search-text flex-shrink-0">
                                     <span class="w-100"><input class="w-100" placeholder="cerca o inizia una nuova chat" name="first" type="text"></span>
                                 </div>
                             </div>
@@ -87,27 +87,70 @@
                         </div>
 
                         <!-- container degli utenti flex-grow1 overflow-auto-->
-                        <div class="flex-grow-1 overflow-auto">
-
+                        <div class="flex-grow-1 overflow-auto d-flex flex-column overflow-auto flex-shrink-0">
+                            <!-- stamp here list contacts with v-for of vueJS -->
+                            <ul>
+                                <li class="py-2" v-for="(user,i) in contacts">
+                                    <div class="">
+                                        <img :src="" alt="">
+                                        <span class="" :class="task.title">{{user[i].name}}</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     
                     <!-- col right -->
-                    <div class="col d-flex flex-direction-column">
+                    <div class=" right-bar col h-100">
 
-                        <!-- barra in alto come quella di sinistra con un text aggiuntivo -->
-                        <div class="right-bar">
-
+                        <!-- container user chat -->
+                        <div class="username d-flex align-items-center">
+                            <!--container left -->
+                            <div class=" container d-flex align-items-center">
+                                <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_1.jpg" alt="">
+                                <div class="d-flex flex-column">
+                                    <h4 class="no-margin">Michele</h4>
+                                    <span class="font-subt-size">Ultimo accesso oggi alle 12:00</span>
+                                </div>
+                            </div>
+                            
+                        <!-- container icons -->
+                            <div class=" container d-flex align-items-center justify-content-end">
+                                <span class="mx-2 color-icons"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <span class="mx-2 color-icons"><i class="fa-solid fa-paperclip"></i></span>
+                                <span class="mx-2 color-icons"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
                         </div>
 
                         <!-- container di testo con flex-grow-1 -->
                         <div class="main-text">
-
+                            <div class="d-flex flex-column">
+                                <div class="d-flex justify-content-end">
+                                    <span class="message-sent">Hai portato a spasso il cane?</span> 
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <span class="message-sent">Ricordati di stendere i panni</span>  
+                                </div>
+                                <div>
+                                    <span class="message-recived">Tutto fatto!</span> 
+                                </div>
+                            </div>    
                         </div>
 
                         <!-- barra sotto flex shrink 0 -->
-                        <div class="bar-write-text">
-                            
+                        <div class="bar-write-text d-flex">
+                            <!-- container emoji -->
+                            <div class="container-emoji">
+                                <span class="color-icons"><i class="fa-solid fa-face-smile"></i></span>
+                            </div>
+                            <!-- container input -->
+                            <div class="write-text-message">
+                                <span class="w-100"><input class="w-100" placeholder="Scrivi un messaggio" name="first" type="text"></span>
+                            </div>
+                            <!-- container vocal -->
+                            <div class="container-microphone">
+                                <span class="color-icons"><i class="fa-solid fa-microphone"></i></span>
+                            </div>
                         </div>  
                     </div>
                     
