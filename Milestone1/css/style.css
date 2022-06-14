@@ -9,9 +9,18 @@
 }
 
 .main-container{
-    background-color: rgb(255, 255, 255);
+    background-color:white;
     height: 95vh;
     margin-top: 2.5vh;
     position: relative;
     z-index: 1;
+}
+.left-bar{
+    background-color: #EAEAEA;
+}
+.color-icons{
+    color:#b1b1b1 ;
+}
+.avatar-user{
+    width: 50px;
 }
