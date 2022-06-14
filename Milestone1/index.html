@@ -29,13 +29,13 @@
             <div class="container main-container">
 
                <!-- andremo and inserire due box (col) uno sinistra uno destra -->
-                <div class="row">
+                <div class="row overflow-hidden">
 
                     <!-- col left shrink 0 d-flex flex-direction-column-->
-                    <div class="left-bar col">
+                    <div class="left-bar col oveflow-hidden">
 
                         <!-- barra in alto shrink 0-->
-                        <div class=" container username d-flex align-items-center">
+                        <div class=" container username d-flex align-items-center overflow-hidden">
                             <!--container left -->
                             <div class="d-flex flex-shrink-0 align-items-center">
                                 <img class="overflow-hidden rounded-circle avatar-user" src="img/paolo.jpg" alt="">
@@ -43,7 +43,7 @@
                             </div>
 
                         <!-- container icons -->
-                        <div class=" container flex-shrink-0 d-flex align-items-center justify-content-end">
+                        <div class=" container flex-shrink-0 d-flex align-items-center justify-content-end overflow-hidden">
                             <span class="mx-2"><i class="color-icons fa-solid fa-circle-notch"></i></span>
                             <span class="mx-2"><i class="color-icons fa-solid fa-message"></i></span>
                             <span class="mx-2"><i class="color-icons fa-solid fa-ellipsis-vertical"></i></span>
@@ -58,7 +58,7 @@
                         
 
                         <!-- barra delle notifiche shrink0-->
-                        <div class="notifications-bar d-flex flex-shrink-0">
+                        <div class="notifications-bar d-flex flex-shrink-0 overflow-hidden">
                             <div class=" container d-flex align-items-center flex-shrink-0">
                                 <span class="my-bell oveflow-hidden rounded-circle bg-white "><i class="fa-solid fa-bell-slash"></i></span>
 
@@ -72,7 +72,7 @@
                         </div>
 
                         <!-- barra di ricerca shrink0-->
-                        <div class="search-bar flex-shrink-0">
+                        <div class="search-bar flex-shrink-0 over overflow-hidden">
                             <div class="container d-flex flex-shrink-0">
                                 <!-- search icon -->
                                 <div class="container-search-icon d-flex justify-content-center flex-shrink-0">
@@ -87,13 +87,95 @@
                         </div>
 
                         <!-- container degli utenti flex-grow1 overflow-auto-->
-                        <div class="flex-grow-1 overflow-auto d-flex flex-column overflow-auto flex-shrink-0">
+                        <div class="flex-grow-1 overflow-auto d-flex flex-column flex-shrink-0">
                             <!-- stamp here list contacts with v-for of vueJS -->
-                            <ul>
-                                <li class="py-2" v-for="(user,i) in contacts">
-                                    <div class="">
-                                        <img :src="" alt="">
-                                        <span class="" :class="task.title">{{user[i].name}}</span>
+                            <ul class="list-unstyled">
+                                <li>    
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_1.jpg" alt="Michele">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Michele</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_2.jpg" alt="">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Fabio</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_3.jpg" alt="">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Samuele</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_4.jpg" alt="">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Alessandro B.</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_5.jpg" alt="">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Alessandro L.</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_6.jpg" alt="">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Claudia</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_7.jpg" alt="">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Federico</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class=" container d-flex align-items-center">
+                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_8.jpg" alt="">
+                                            <div class="d-flex flex-column">
+                                                <h4 class="no-margin">Davide</h4>
+                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -126,13 +208,16 @@
                         <div class="main-text">
                             <div class="d-flex flex-column">
                                 <div class="d-flex justify-content-end">
-                                    <span class="message-sent">Hai portato a spasso il cane?</span> 
+                                    <span class="message-sent">Hai portato a spasso il cane?</span>
+                                    <span>15:30</span>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                    <span class="message-sent">Ricordati di stendere i panni</span>  
+                                    <span class="message-sent">Ricordati di stendere i panni</span>
+                                    <span>15:50</span>
                                 </div>
                                 <div>
-                                    <span class="message-recived">Tutto fatto!</span> 
+                                    <span class="message-recived">Tutto fatto!</span>
+                                    <span>16:15</span>
                                 </div>
                             </div>    
                         </div>

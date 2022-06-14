@@ -1,6 +1,6 @@
 .back-bg{
     height: 100px;
-    background-color: rgb(20, 128, 20);
+    background-color: #009688;
     z-index: 0;
     position: absolute;
     top: 0;
@@ -95,7 +95,7 @@
     justify-content: center;
 }
 .message-sent{
-    background-color: rgb(1, 219, 1);
+    background-color: #D5F9BA;
     border-radius: 1em;
     padding: 1rem;
 }
