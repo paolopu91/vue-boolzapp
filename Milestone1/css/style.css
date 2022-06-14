@@ -14,8 +14,10 @@
     margin-top: 2.5vh;
     position: relative;
     z-index: 1;
+    padding-left: 0;
+    padding-right: 0;
 }
-.left-bar{
+.username{
     background-color: #EAEAEA;
 }
 .color-icons{
@@ -23,4 +25,22 @@
 }
 .avatar-user{
     width: 50px;
+}
+.notifications-bar{
+    background-color: #8EDAFC;
+}
+.search-bar{
+    background-color: #EAEAEA;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+.container-search-icon{
+    border: 1px solid sandybrown;
+    flex-shrink: 0;
+    width: 50px;
+    background-color: white;
+}
+.container-search-text{
+    border: 1px solid sandybrown;
+    flex-grow:1;
 }

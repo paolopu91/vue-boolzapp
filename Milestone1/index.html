@@ -29,33 +29,60 @@
             <div class="container main-container">
 
                <!-- andremo and inserire due box (col) uno sinistra uno destra -->
-                <div class="row d-flex">
+                <div class="row">
 
                     <!-- col left shrink 0 d-flex flex-direction-column-->
-                    <div class="left-bar col d-flex">
+                    <div class="left-bar col">
 
                         <!-- barra in alto shrink 0-->
-                        <div class="container username d-flex align-items-center justify-content-start">
-                            <div class="overflow-hidden rounded-circle ">
-                                <img class="avatar-user" src="img/paolo.jpg" alt="">
+                        <div class="username d-flex align-items-center">
+                            <!--container left -->
+                            <div class="d-flex align-items-center">
+                                <img class="overflow-hidden rounded-circle avatar-user" src="img/paolo.jpg" alt="">
+                                <h4>Paolo</h4>
                             </div>
-                            <h4>Paolo</h4>
-                        </div>
 
-                        <!-- right bar icons -->
-                        <div class="container d-flex align-items-center justify-content-end">
+                        <!-- container icons -->
+                        <div class=" container d-flex align-items-center justify-content-end">
                             <span class="mx-2"><i class="color-icons fa-solid fa-circle-notch"></i></span>
                             <span class="mx-2"><i class="color-icons fa-solid fa-message"></i></span>
                             <span class="mx-2"><i class="color-icons fa-solid fa-ellipsis-vertical"></i></span>
                         </div>
+                            
+
+
+                        </div>
+                        
+
+                        <!-- right bar icons -->
+                        
 
                         <!-- barra delle notifiche shrink0-->
-                        <div class="notifications-bar">
+                        <div class="notifications-bar d-flex">
+                            <div class=" container d-flex align-items-center ">
+                                <span class="oveflow-hidden rounded-circle bg-white "><i class="fa-solid fa-bell-slash"></i></span>
 
+                                <div class="d-flex flex-column">
+                                    <span>Ricevi notifiche di nuovi messaggi</span>
+                                    <a href="https://faq.whatsapp.com/web/chats/how-to-manage-your-notifications/?lang=it">Attiva notifiche Desktop</a>
+                                </div>
+                            
+                            </div>
+                            
                         </div>
 
                         <!-- barra di ricerca shrink0-->
                         <div class="search-bar">
+                            <div class="container d-flex">
+                                <!-- search icon -->
+                                <div class="container-search-icon d-flex justify-content-center">
+                                    <span><i class="color-icons fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                                <!-- search text -->
+                                <div class="container-search-text">
+                                    <span class="w-100"><input class="w-100" placeholder="cerca o inizia una nuova chat" name="first" type="text"></span>
+                                </div>
+                            </div>
 
                         </div>
 
