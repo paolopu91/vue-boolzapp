@@ -19,7 +19,6 @@
 }
 .left-bar{
     flex-grow:2;
-    padding-left: 0;
     padding-right: 0;
     
 }
@@ -74,10 +73,12 @@
 .main-text{
     background-image:url(../img/mine.jpg);
     width: 100%;
-    height: 50vh;
+    height: 400px;
+    min-height: 250px;
+    max-height: 700px;
     flex-grow: 1;
     overflow: auto;
-
+    padding: 2rem;
 }
 .write-text-message{
     flex-grow: 1;
@@ -103,4 +104,16 @@
     background-color: white;
     border-radius: 1em;
     padding: 1rem;
+}
+.overflow-y{
+    overflow: auto;
+}
+.my-contain-user{
+    height: 328px;
+    min-height: 328px;
+    max-height: 700px;
+}
+.margin-y{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
