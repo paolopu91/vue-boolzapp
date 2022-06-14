@@ -7,7 +7,7 @@ new Vue({
     el:"#app",
     data:{
         user:"nome utente",
-        avata:"i",
+        avatar:"i",
     },
     //Array of contacts
     contatti:[
