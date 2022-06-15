@@ -4,7 +4,7 @@ Creare una replica di whatsapp web
 const contatti= [
   {
     name: "Michele",
-    avatar: "avatar_1.jpg",
+    avatar: "_1",
     visible: true,
     messages: [
       {
@@ -26,7 +26,7 @@ const contatti= [
   },
   {
     name: "Fabio",
-    avatar: "avatar_2.jpg",
+    avatar: "_2",
     visible: true,
     messages: [
       {
@@ -48,7 +48,7 @@ const contatti= [
   },
   {
     name: "Samuele",
-    avatar: "avatar_3.jpg",
+    avatar: "_3",
     visible: true,
     messages: [
       {
@@ -70,7 +70,7 @@ const contatti= [
   },
   {
     name: "Alessandro B.",
-    avatar: "avatar_4.jpg",
+    avatar: "_4",
     visible: true,
     messages: [
       {
@@ -87,7 +87,7 @@ const contatti= [
   },
   {
     name: "Alessandro L.",
-    avatar: "avatar_5.jpg",
+    avatar: "_5",
     visible: true,
     messages: [
       {
@@ -104,7 +104,7 @@ const contatti= [
   },
   {
     name: "Claudia",
-    avatar: "avatar_6.jpg",
+    avatar: "_6",
     visible: true,
     messages: [
       {
@@ -126,7 +126,7 @@ const contatti= [
   },
   {
     name: "Federico",
-    avatar: "avatar_7.jpg",
+    avatar: "_7",
     visible: true,
     messages: [
       {
@@ -143,7 +143,7 @@ const contatti= [
   },
   {
     name: "Davide",
-    avatar: "avatar_8.jpg",
+    avatar: "_8",
     visible: true,
     messages: [
       {
@@ -171,7 +171,6 @@ new Vue({
       listaContatti: contatti,
         user: {
           name:"nome utente",
-          avatar:"avatar_1.jpg"
         }
     },
     //Array of contacts

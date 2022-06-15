@@ -88,13 +88,14 @@
                         <div class="my-contain-users overflow-auto d-flex flex-column flex-shrink-0">
                             <!-- stamp here list contacts with v-for of vueJS -->
                             <!-- containerimg -->
-                            <div class="contacts-container" v-for ="(contact,i) in listaContatti">
+                            <div class="contacts-container" v-for ="contact in listaContatti">
                                 <div class="contact-avatar">
-                                    <img v-bind:src="contact.avatar" alt="">
+                                    <img class="w-100 h-100 rounded-circle" v-bind:src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
-                                <!-- container nome -->
-                                <div class="contact-info">
-                                    {{contact.name}}
+                                <!-- container contat + info -->
+                                <div class="contact-info d-flex flex-column">
+                                    <span>{{contact.name}}</span>
+                                    <span class="font-subt-size">Ultimo messaggio inviato</span>
                                 </div>
                             </div>        
                         </div>
