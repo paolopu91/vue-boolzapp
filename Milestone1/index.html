@@ -26,7 +26,7 @@
             <!-- I create my div container for my whatsapp web
             the container will have margin left and right auto to center it and vh 95 to leave the fixed space above and below -->
 
-            <div class="container main-container">
+            <div class="container main-container oveflow-hidden">
 
                <!-- andremo and inserire due box (col) uno sinistra uno destra -->
                 <div class="row overflow-hidden">
@@ -43,7 +43,7 @@
                             </div>
 
                             <!-- container icons -->
-                            <div class=" container flex-shrink-0 d-flex align-items-center justify-content-end overflow-hidden">
+                            <div class=" container d-flex align-items-center justify-content-end overflow-hidden">
                                 <span class="mx-2"><i class="color-icons fa-solid fa-circle-notch"></i></span>
                                 <span class="mx-2"><i class="color-icons fa-solid fa-message"></i></span>
                                 <span class="mx-2"><i class="color-icons fa-solid fa-ellipsis-vertical"></i></span>
@@ -84,7 +84,7 @@
                         </div>
 
                         <!-- container degli utenti flex-grow1 overflow-auto-->
-                        <div class="my-contain-user flex-grow-1 overflow-y d-flex flex-column flex-shrink-0">
+                        <div class="my-contain-users flex-grow-1 overflow-y d-flex flex-column flex-shrink-0">
                             <!-- stamp here list contacts with v-for of vueJS -->
                             <ul class="list-unstyled">
                                 <li>    
@@ -202,7 +202,7 @@
                         </div>
 
                         <!-- container di testo con flex-grow-1 -->
-                        <div class="main-text overflow-y">
+                        <div class="main-text">
                             <div class="d-flex flex-column">
                                 <div class="d-flex justify-content-end">
                                     <span class="message-sent">Hai portato a spasso il cane?

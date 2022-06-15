@@ -76,7 +76,6 @@
     height: 400px;
     min-height: 250px;
     max-height: 700px;
-    flex-grow: 1;
     overflow: auto;
     padding: 2rem;
 }
@@ -111,7 +110,7 @@
 .overflow-y{
     overflow: auto;
 }
-.my-contain-user{
+.my-contain-users{
     height: 328px;
     min-height: 328px;
     max-height: 700px;
