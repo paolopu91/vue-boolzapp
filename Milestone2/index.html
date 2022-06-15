@@ -32,7 +32,7 @@
                 <div class="row overflow-hidden">
 
                     <!-- col left shrink 0 d-flex flex-direction-column-->
-                    <div class="left-bar col oveflow-hidden">
+                    <div class="left-bar col oveflow-hidden ">
 
                         <!-- barra in alto shrink 0-->
                         <div class=" container username d-flex align-items-center overflow-hidden">
@@ -85,24 +85,23 @@
 
                         
                         <!-- container degli utenti flex-grow1 overflow-auto-->
-                        <div class="my-contain-users overflow-auto d-flex flex-column flex-shrink-0">
+                        <div class="my-contain-users overflow-auto d-flex flex-column">
                             <!-- stamp here list contacts with v-for of vueJS -->
                             <!-- containerimg -->
-                            <div class="contacts-container" v-for ="contact in listaContatti">
-                                <div class="contact-avatar">
-                                    <img class="w-100 h-100 rounded-circle" v-bind:src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                            <div class="contacts-container" v-for ="contact in listaContatti"  v-on:click="currentContact(contact)">
+                                <div class="px-2">
+                                    <img class="avatar-width rounded-circle" v-bind:src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
                                 <!-- container contat + info -->
-                                <div class="contact-info d-flex flex-column">
-                                    <span>{{contact.name}}</span>
-                                    <span class="font-subt-size">Ultimo messaggio inviato</span>
+                                <div class="contact-info margin-zero w-100">
+    
+                                    <span class="px-2">{{contact.name}}</span>
+                                    <span class="font-subt-size text-right">{{contact.messages[contact.messages.length -1].date}}</span>
+                                    <div class="px-2 font-subt-size justify-content-end"> {{contact.messages[contact.messages.length -1].message}} </div>
+
                                 </div>
                             </div>        
                         </div>
-
-
-
-
                     </div>
                     
                     <!-- col right -->
@@ -128,8 +127,15 @@
                         </div>
 
                         <!-- container di testo con flex-grow-1 -->
-                        <div class="main-text">
-                            <div class="d-flex flex-column">
+                        <div class="main-text d-flex flex-column py-2 px-2">
+                            <div v-for="(notice, i) in actualContact.messages"
+                            :class="{'message-received align-self-start': notice.status==='received','message-sent align-self-end': notice.status==='sent'}">
+                            {{notice.message}}</div>
+
+
+                            <!-- old code -->
+
+                            <!-- <div class="d-flex flex-column">
                                 <div class="d-flex justify-content-end">
                                     <span class="message-sent">Hai portato a spasso il cane?
                                         <span class="font-subt-size d-flex justify-content-end ">15:30</span>
@@ -148,7 +154,8 @@
                                     </span>
                                     
                                 </div>
-                            </div>    
+                            </div>     -->
+
                         </div>
 
                         <!-- barra sotto flex shrink 0 -->

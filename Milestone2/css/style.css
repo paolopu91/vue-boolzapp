@@ -99,7 +99,7 @@
     border-radius: 1em;
     padding: 1rem;
 }
-.message-recived{
+.message-received{
     background-color: white;
     border-radius: 1em;
     padding: 1rem;
@@ -111,9 +111,7 @@
     overflow: auto;
 }
 .my-contain-users{
-    height: 328px;
-    min-height: 328px;
-    max-height: 700px;
+    max-height: 328px;
 }
 .margin-y{
     margin-top: 0.5rem;
@@ -126,11 +124,11 @@
     display: flex;
     margin-bottom: 2rem;
 }
-.contact-info{
-    
-}
-.contact-container{
+.avatar-width{
     max-width: 50px;
     width: 100%;
     border-radius: 50%;
+}
+.text-right{
+    float: right;
 }

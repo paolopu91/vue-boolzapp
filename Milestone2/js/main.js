@@ -169,10 +169,17 @@ new Vue({
     el:"#app",
     data:{
       listaContatti: contatti,
-        user: {
-          name:"nome utente",
-        }
+      message:this.message,
+      actualContact: contatti[0],
+
+        
     },
+    methods:{
+      //i'm writing here my function for click on contact
+      currentContact(contact){
+        this.actualContact=contact;
+      }
+    }
     //Array of contacts
     
 })
