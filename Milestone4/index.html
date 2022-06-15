@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- link fontawesome -->
+    <script src="https://kit.fontawesome.com/34ba7cedd4.js" crossorigin="anonymous"></script>
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- colored background with fixed height and lower z-index than our container -->
+    <div class="back-bg"></div>
+
+
+    <div id="app">
+        <main>
+            
+            <!-- I create my div container for my whatsapp web
+            the container will have margin left and right auto to center it and vh 95 to leave the fixed space above and below -->
+
+            <div class="container main-container oveflow-hidden">
+
+               <!-- andremo and inserire due box (col) uno sinistra uno destra -->
+                <div class="row overflow-hidden">
+
+                    <!-- col left shrink 0 d-flex flex-direction-column-->
+                    <div class="left-bar col oveflow-hidden ">
+
+                        <!-- barra in alto shrink 0-->
+                        <div class=" container username d-flex align-items-center overflow-hidden">
+                            <!--container left -->
+                            <div class="d-flex flex-shrink-0 align-items-center overflow-hidden">
+                                <img class="overflow-hidden rounded-circle avatar-user" src="img/paolo.jpg" alt="">
+                                <h4>Paolo</h4>
+                            </div>
+
+                            <!-- container icons -->
+                            <div class=" container d-flex align-items-center justify-content-end overflow-hidden">
+                                <span class="mx-2"><i class="color-icons fa-solid fa-circle-notch"></i></span>
+                                <span class="mx-2"><i class="color-icons fa-solid fa-message"></i></span>
+                                <span class="mx-2"><i class="color-icons fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                        </div>
+                        
+
+                        <!-- right bar icons -->
+                        
+
+                        <!-- barra delle notifiche shrink0-->
+                        <div class="notifications-bar d-flex flex-shrink-0 overflow-hidden">
+                            <div class=" container d-flex align-items-center flex-shrink-0 overflow-hidden">
+                                <span class="my-bell oveflow-hidden rounded-circle bg-white "><i class="fa-solid fa-bell-slash"></i></span>
+
+                                <div class="d-flex flex-column flex-shrink-0 overflow-hidden">
+                                    <span>Ricevi notifiche di nuovi messaggi</span>
+                                    <a href="https://faq.whatsapp.com/web/chats/how-to-manage-your-notifications/?lang=it">Attiva notifiche Desktop</a>
+                                </div>
+                            
+                            </div>
+                            
+                        </div>
+
+                        <!-- barra di ricerca shrink0-->
+                        <div class="search-bar flex-shrink-0 over overflow-hidden">
+                            <div class="container d-flex flex-shrink-0">
+                                <!-- search icon -->
+                                <div class="container-search-icon d-flex justify-content-center flex-shrink-0">
+                                    <span><i class="color-icons fa-solid fa-magnifying-glass"></i></span>
+                                </div>
+                                <!-- search text -->
+                                <div class="container-search-text flex-shrink-0">
+                                    <span class="w-100"><input class="w-100" placeholder="cerca o inizia una nuova chat" name="first" type="text"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                        <!-- container degli utenti flex-grow1 overflow-auto-->
+                        <div class="my-contain-users overflow-auto d-flex flex-column">
+                            <!-- stamp here list contacts with v-for of vueJS -->
+                            <!-- containerimg -->
+                            <div class="contacts-container" v-for ="contact in listaContatti" v-on:click="currentContact(contact)">
+                                <div class="px-2">
+                                    <img class="avatar-width rounded-circle" v-bind:src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                </div>
+                                <!-- container contat + info -->
+                                <div class="contact-info margin-zero w-100">
+    
+                                    <span class="px-2">{{contact.name}}</span>
+                                    <span class="font-subt-size text-right">{{contact.messages[contact.messages.length -1].date}}</span>
+                                    <div class="px-2 font-subt-size justify-content-end"> {{contact.messages[contact.messages.length -1].message}} </div>
+
+                                </div>
+                            </div>        
+                        </div>
+                    </div>
+                    
+                    <!-- col right -->
+                    <div class=" right-bar col h-100">
+
+                        <!-- container user chat -->
+                        <div class="username d-flex align-items-center">
+                            <!--container left -->
+                            <div class=" container d-flex align-items-center">
+                                <img class="overflow-hidden rounded-circle avatar-user" :src="'img/avatar'+ actualContact.avatar +'.jpg'" alt="">
+                                <div class="d-flex flex-column">
+                                    <h4 class="no-margin">{{actualContact.name}}</h4>
+                                    <span class="font-subt-size">Ultimo accesso oggi alle 12:00</span>
+                                </div>
+                            </div>
+                            
+                        <!-- container icons -->
+                            <div class=" container d-flex align-items-center justify-content-end">
+                                <span class="mx-2 color-icons"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <span class="mx-2 color-icons"><i class="fa-solid fa-paperclip"></i></span>
+                                <span class="mx-2 color-icons"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                        </div>
+
+                        <!-- container di testo con flex-grow-1 -->
+                        <div class="main-text d-flex flex-column py-2 px-2">
+                            <div v-for="(notice, i) in actualContact.messages"
+                            :class="{'message-received align-self-start': notice.status==='received','message-sent align-self-end': notice.status==='sent'}">
+                            <div>
+                                <span class="">{{notice.message}}</span>
+                                <span class="font-subt-size text-right">{{notice.data}}</span>
+                            </div>    
+                        </div>
+
+
+                            <!-- old code -->
+
+                            <!-- <div class="d-flex flex-column">
+                                <div class="d-flex justify-content-end">
+                                    <span class="message-sent">Hai portato a spasso il cane?
+                                        <span class="font-subt-size d-flex justify-content-end ">15:30</span>
+                                    </span>
+                                    
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <span class="message-sent">Ricordati di stendere i panni
+                                        <span class="font-subt-size d-flex justify-content-end ">15:50</span>
+                                    </span>
+                                    
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <span class="message-recived">Tutto fatto!
+                                        <span class="font-subt-size d-flex justify-content-end">16:15</span>
+                                    </span>
+                                    
+                                </div>
+                            </div>     -->
+
+                        </div>
+
+                        <!-- barra sotto flex shrink 0 -->
+                        <div class="bar-write-text d-flex">
+                            <!-- container emoji -->
+                            <div class="container-emoji">
+                                <span class="color-icons"><i class="fa-solid fa-face-smile"></i></span>
+                            </div>
+                            <!-- container input -->
+                            <div class="write-text-message">
+                                <input class="w-100" placeholder="Write here your text" name="first" type="text"
+                                       v-model="newMessageContact" @keyup.enter="newMessage">
+                                       
+                            </div>
+                            <!-- container vocal -->
+                            <div class="container-microphone">
+                                <span class="color-icons"><i class="fa-solid fa-microphone"></i></span>
+                            </div>
+                        </div>  
+                    </div>
+                    
+                    
+                </div>
+                
+                
+
+                
+                
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
