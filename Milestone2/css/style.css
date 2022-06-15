@@ -119,3 +119,14 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+.list-decoration{
+    list-style: none;
+}
+.contacts-container{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.contact-container{
+    width: 50px;
+    height: 50px;
+}

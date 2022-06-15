@@ -83,13 +83,25 @@
 
                         </div>
 
+                        
                         <!-- container degli utenti flex-grow1 overflow-auto-->
-                        <div class="my-contain-users flex-grow-1 overflow-y d-flex flex-column flex-shrink-0" 
-                                    v-for ="contact in listaContatti"
-                                    v-on:click="">
+                        <div class="my-contain-users overflow-auto d-flex flex-column flex-shrink-0">
                             <!-- stamp here list contacts with v-for of vueJS -->
+                            <!-- containerimg -->
+                            <div class="contacts-container" v-for ="(contact,i) in listaContatti">
+                                <div class="contact-avatar">
+                                    <img v-bind:src="contact.avatar" alt="">
+                                </div>
+                                <!-- container nome -->
+                                <div class="contact-info">
                                     {{contact.name}}
+                                </div>
+                            </div>        
                         </div>
+
+
+
+
                     </div>
                     
                     <!-- col right -->

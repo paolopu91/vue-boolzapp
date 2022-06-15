@@ -171,7 +171,7 @@ new Vue({
       listaContatti: contatti,
         user: {
           name:"nome utente",
-          avatar:"i",
+          avatar:"avatar_1.jpg"
         }
     },
     //Array of contacts
