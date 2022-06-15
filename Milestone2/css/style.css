@@ -1,0 +1,121 @@
+.back-bg{
+    height: 100px;
+    background-color: #009688;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.main-container{
+    background-color:white;
+    height: 95vh;
+    margin-top: 2.5vh;
+    position: relative;
+    z-index: 1;
+    padding-left: 0;
+    padding-right: 0;
+}
+.left-bar{
+    flex-grow:2;
+    padding-right: 0;
+    
+}
+.username{
+    background-color: #EAEAEA;
+    height: 57px;
+    flex-shrink: 0;
+}
+.color-icons{
+    color:#b1b1b1 ;
+}
+.avatar-user{
+    width: 50px;
+}
+.notifications-bar{
+    background-color: #8EDAFC;
+}
+.my-bell{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8EDAFC;
+}
+.search-bar{
+    background-color: #EAEAEA;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+.container-search-icon{
+    border: 1px solid sandybrown;
+    flex-shrink: 0;
+    width: 50px;
+    background-color: white;
+}
+.container-search-text{
+    border: 1px solid sandybrown;
+    flex-grow:1;
+}
+.font-subt-size{
+    font-size: 15px;
+    color: #b1b1b1;
+}
+.no-margin{
+    margin-bottom:0;
+}
+.right-bar{
+    flex-grow: 4;
+    padding-left: 0;
+}
+.main-text{
+    background-image:url(../img/mine.jpg);
+    width: 100%;
+    height: 400px;
+    min-height: 250px;
+    max-height: 700px;
+    overflow: auto;
+    padding: 2rem;
+}
+.write-text-message{
+    flex-grow: 1;
+}
+.container-emoji{
+    flex-shrink: 0 ;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+}
+.container-microphone{
+    flex-shrink: 0;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+}
+.message-sent{
+    background-color: #D5F9BA;
+    border-radius: 1em;
+    padding: 1rem;
+}
+.message-recived{
+    background-color: white;
+    border-radius: 1em;
+    padding: 1rem;
+}
+.bar-write-text{
+    background-color: #EAEAEA;
+}
+.overflow-y{
+    overflow: auto;
+}
+.my-contain-users{
+    height: 328px;
+    min-height: 328px;
+    max-height: 700px;
+}
+.margin-y{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}

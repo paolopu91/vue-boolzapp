@@ -84,98 +84,11 @@
                         </div>
 
                         <!-- container degli utenti flex-grow1 overflow-auto-->
-                        <div class="my-contain-users flex-grow-1 overflow-y d-flex flex-column flex-shrink-0">
+                        <div class="my-contain-users flex-grow-1 overflow-y d-flex flex-column flex-shrink-0" 
+                                    v-for ="contact in listaContatti"
+                                    v-on:click="">
                             <!-- stamp here list contacts with v-for of vueJS -->
-                            <ul class="list-unstyled">
-                                <li>    
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_1.jpg" alt="Michele">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Michele</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_2.jpg" alt="">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Fabio</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_3.jpg" alt="">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Samuele</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_4.jpg" alt="">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Alessandro B.</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_5.jpg" alt="">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Alessandro L.</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_6.jpg" alt="">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Claudia</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_7.jpg" alt="">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Federico</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div>
-                                        <div class=" container d-flex align-items-center margin-y">
-                                            <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_8.jpg" alt="">
-                                            <div class="d-flex flex-column">
-                                                <h4 class="no-margin">Davide</h4>
-                                                <span class="font-subt-size">Ultimo messaggio inviato</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    {{contact.name}}
                         </div>
                     </div>
                     
