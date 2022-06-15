@@ -172,29 +172,48 @@ new Vue({
       message:this.message,
       actualContact: contatti[0],
       newMessageContact:"",
-        
     },
+
+    //write here the functions
+
     methods:{
+
       //i'm writing here my function for click on contact
       currentContact(contact){
         this.actualContact=contact;
-      }
-    },
+      },
+      //i need to create an automatically answer for my message
+      answerBot: function(){
+        this.actualContact.messages.push(
+          {
+            //this is the answer from Bot
+            data:new Date().toLocaleString(),
+            message:"ok!",
+            status:"received",
+          },
+        )
 
-    //i need to create a function for sent new message
-    newMessage(){
-      //this is a sofisticate function for pushes new message in main text
-      this.actualContact.messages.push(
-        {
-          date: new Date().toLocaleString(),
-          message: this.newMessageContact,
-          status: "sent",
-          //In this function need to create a new message with a new data
-        }
-      )
+        this.newMessageContact="";
+      },
+      //i need to create a function for sent new message
+      newMessage(){
+        //this is a sofisticate function for pushes new message in main text
+        this.actualContact.messages.push(
+          {
+            //In this function i need to create a new message with a new data
+            date: new Date().toLocaleString(),
+            message: this.newMessageContact,
+            status: "sent",
+            fanMessage: this.helloThere,
+          } 
+        )
+        //this is the function that return answerBot 1 sec after my message.
+        setTimeout(this.answerBot,1000)
+            this.newMessageContact="";
+      },    
       
+
       
-    }
-    
+    },
     
 })

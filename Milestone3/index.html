@@ -111,9 +111,9 @@
                         <div class="username d-flex align-items-center">
                             <!--container left -->
                             <div class=" container d-flex align-items-center">
-                                <img class="overflow-hidden rounded-circle avatar-user" src="img/avatar_1.jpg" alt="">
+                                <img class="overflow-hidden rounded-circle avatar-user" :src="'img/avatar'+ actualContact.avatar +'.jpg'" alt="">
                                 <div class="d-flex flex-column">
-                                    <h4 class="no-margin">Michele</h4>
+                                    <h4 class="no-margin">{{actualContact.name}}</h4>
                                     <span class="font-subt-size">Ultimo accesso oggi alle 12:00</span>
                                 </div>
                             </div>
@@ -130,7 +130,11 @@
                         <div class="main-text d-flex flex-column py-2 px-2">
                             <div v-for="(notice, i) in actualContact.messages"
                             :class="{'message-received align-self-start': notice.status==='received','message-sent align-self-end': notice.status==='sent'}">
-                            {{notice.message}}</div>
+                            <div>
+                                <span class="">{{notice.message}}</span>
+                                <span class="font-subt-size text-right">{{notice.data}}</span>
+                            </div>    
+                        </div>
 
 
                             <!-- old code -->
@@ -165,8 +169,10 @@
                                 <span class="color-icons"><i class="fa-solid fa-face-smile"></i></span>
                             </div>
                             <!-- container input -->
-                            <div class="write-text-message" :class="newMessageContact">
-                                <span class="w-100"><input class="w-100" placeholder="Scrivi un messaggio" name="first" type="text"></span>
+                            <div class="write-text-message">
+                                <input class="w-100" placeholder="Write here your text" name="first" type="text"
+                                       v-model="newMessageContact" @keyup.enter="newMessage">
+                                       
                             </div>
                             <!-- container vocal -->
                             <div class="container-microphone">
