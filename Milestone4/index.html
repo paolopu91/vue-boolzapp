@@ -93,7 +93,7 @@
                             <!-- stamp here list contacts with v-for of vueJS -->
 
 
-                            <div class="contacts-container" v-for ="contact in listaContatti" v-on:click="currentContact(contact)">
+                            <div class="contacts-container" v-for ="contact in filteredSearch()" v-on:click="currentContact(contact)">
                                 <div class="px-2">
                                     <img class="avatar-width rounded-circle" v-bind:src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>

@@ -214,18 +214,15 @@ new Vue({
             this.newMessageContact="";
       },    
       
+      //this is a function for search contacts in my search bar
       filteredSearch(){
-          if(this.inputSearch != ''){
-            this.listaContatti = this.listacontatti.filter((contact) =>{
-              return contact.name.toLowerCase().includes(this.inputSearch.toLocaleString());
-            })
-          }
-          else{
-            this.listaContatti= this.listaContatti
-          }
-          
-          
-      }
+        return this.listaContatti.filter((user)=>
+        // ok contact works and is correctly read by our console.log  
+          user.name.toLowerCase().includes(this.inputSearch)
+          // ok contact.name is correctly read and visible on our console page 
+        );  
+        
+      },
       
     },
     
