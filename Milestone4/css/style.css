@@ -132,3 +132,6 @@
 .text-right{
     float: right;
 }
+.margin-left{
+    margin-left: 1rem;
+}

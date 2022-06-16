@@ -77,7 +77,11 @@
                                 </div>
                                 <!-- search text -->
                                 <div class="container-search-text flex-shrink-0">
-                                    <span class="w-100"><input class="w-100" placeholder="cerca o inizia una nuova chat" name="first" type="text"></span>
+                                    <span class="w-100">
+
+                                        <input class="w-100" v-model="inputSearch" placeholder="cerca o inizia una nuova chat" name="first" type="text" :key.enter="filteredSearch()">
+
+                                    </span>
                                 </div>
                             </div>
 
@@ -87,7 +91,8 @@
                         <!-- container degli utenti flex-grow1 overflow-auto-->
                         <div class="my-contain-users overflow-auto d-flex flex-column">
                             <!-- stamp here list contacts with v-for of vueJS -->
-                            <!-- containerimg -->
+
+
                             <div class="contacts-container" v-for ="contact in listaContatti" v-on:click="currentContact(contact)">
                                 <div class="px-2">
                                     <img class="avatar-width rounded-circle" v-bind:src="'img/avatar' + contact.avatar + '.jpg'" alt="">

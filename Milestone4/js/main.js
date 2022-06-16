@@ -172,18 +172,20 @@ new Vue({
       message:this.message,
       actualContact: contatti[0],
       newMessageContact:"",
+      inputSearch:"",
     },
 
     //write here the functions
 
     methods:{
 
+      
       //i'm writing here my function for click on contact
       currentContact(contact){
         this.actualContact=contact;
       },
       //i need to create an automatically answer for my message
-      answerBot: function(){
+      answerBot(){
         this.actualContact.messages.push(
           {
             //this is the answer from Bot
@@ -212,7 +214,18 @@ new Vue({
             this.newMessageContact="";
       },    
       
-
+      filteredSearch(){
+          if(this.inputSearch != ''){
+            this.listaContatti = this.listacontatti.filter((contact) =>{
+              return contact.name.toLowerCase().includes(this.inputSearch.toLocaleString());
+            })
+          }
+          else{
+            this.listaContatti= this.listaContatti
+          }
+          
+          
+      }
       
     },
     
